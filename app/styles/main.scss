@@ -1,0 +1,85 @@
+@import "trashmap";
+@import "fonts";
+@import "footer";
+@import "report";
+@import "info";
+@import "profile";
+
+.container-fluid {
+	margin-bottom: 55px;
+}
+
+.icon-info-sign {
+	color: rgba(0,0,0,.1);
+	position: absolute;
+	right: 20px;
+	top: 13px;
+}
+
+.bg-grey {
+	background: rgba(0,0,0,.1);
+	margin: 10px -20px;
+	padding: 10px 20px;
+}
+
+a, a:active, a:hover {
+	text-decoration: none;
+}
+
+h1 {
+	font-family: OilCan;
+	color: #d2514b;
+	text-shadow: 0px 1px rgba(0, 0, 0, 0.2);
+	text-align: center;
+}
+
+.button {
+	display: block;
+	margin: 0 auto;
+	padding: 10px;
+	width: 50%;
+	border-radius: 3px;
+	background: #d2514b;
+	box-shadow: 0 3px 0 #bb352f;
+	color: #f2f2f2;
+	text-align: center;
+	text-decoration: none;
+	-webkit-transition: all .1s linear;
+	-moz-transition: all .1s linear;
+	-o-transition: all .1s linear;
+	-ms-transition: all .1s linear;
+	transition: all .1s linear;
+	-webkit-transform: translateZ(0);
+	-moz-transform: translateZ(0);
+	-o-transform: translateZ(0);
+	-ms-transform: translateZ(0);
+	transform: translateZ(0);
+	
+	&:active {
+		box-shadow: none;
+		-webkit-transform: translate3d(0, 3px, 0);
+		-moz-transform: translate3d(0, 3px, 0);
+		-o-transform: translate3d(0, 3px, 0);
+		-ms-transform: translate3d(0, 3px, 0);
+		transform: translate3d(0, 3px, 0);
+	}
+	
+	&:hover {
+		color: #f2f2f2;
+	}
+}
+.button-yellow {
+	@extend .button;
+	background: #E8C04F;
+	box-shadow: 0 3px 0 darken(#E8C04F, 15%);
+}
+
+.main {
+	text-align: center;
+	
+	img {
+		display: block;
+		margin: 90px auto 90px auto;
+	}
+}
+

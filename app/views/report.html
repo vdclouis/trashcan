@@ -1,0 +1,51 @@
+<div class="report">
+
+  <h1>Report</h1>
+
+  <form name="report">
+    <div class="control-group">
+      <div class="controls">
+        <input type="file">
+      </div>
+    </div>
+
+    <div class="control-group bg-grey">
+      <label>Size of trash:</label>
+      <label class="radio">
+        <input ng-model="trash.size" type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked><i class="icon-trash"></i> Small
+      </label>
+      <label class="radio">
+        <input ng-model="trash.size" type="radio" name="optionsRadios" id="optionsRadios2" value="option2"><i class="icon-shopping-cart"></i> Medium
+      </label>
+      <label class="radio">
+        <input ng-model="trash.size" type="radio" name="optionsRadios" id="optionsRadios3" value="option3"><i class="icon-truck"></i> Big
+      </label>
+    </div>
+
+    <div class="control-group">
+      <label>Type of trash:</label>
+      <select multiple="multiple" ng-model="trash.type">
+        <option> Rest </option>
+        <option> PMD </option>
+        <option> GFT </option>
+        <option> KGA </option>
+        <option> Glas </option>
+        <option> Karton </option>
+      </select>
+    </div>
+
+    <div class="control-group bg-grey">
+      <label>Location:</label>
+      <input ng-model="trash.lat" type="text" value="" />
+      <input ng-model="trash.long" type="text" value="" />
+    </div>
+    <div class="control-group">
+      <label>Details:</label>
+      <textarea ng-model="trash.details" rows="3"></textarea>
+    </div>
+
+    <div class="control-group">
+      <a href="" ng-click="report()" type="submit" class="button">Report</a>
+    </div>
+  </form>
+</div>
