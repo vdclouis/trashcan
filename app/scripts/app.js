@@ -6,17 +6,15 @@ angular.module('trashcanApp', ['ngResource'])
     // CORS
     delete $httpProvider.defaults.headers.common['X-Requested-With'];
 
-    // Change default header content type for post request
-    $httpProvider.defaults.headers.post = {'Content-Type': 'application/x-www-form-urlencoded'};
-
-    // Transform every request to form urlencoded data
-    $httpProvider.defaults.transformRequest = function(data){
-      if (data === undefined) {
-        return data;
+    $httpProvider.defaults.transformRequest = function (data) {
+      var str = [];
+      for (var p in data) {
+        data[p] !== undefined && str.push(encodeURIComponent(p) + '=' + encodeURIComponent(data[p]));
       }
-      // Jquery rescue !!!!!
-      return $.param(data);
+      return str.join('&');
     };
+    $httpProvider.defaults.headers.put['Content-Type'] = $httpProvider.defaults.headers.post['Content-Type'] =
+      'application/x-www-form-urlencoded; charset=UTF-8';
    })
   .config(['$routeProvider', function ($routeProvider) {
     $routeProvider

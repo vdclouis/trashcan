@@ -1,15 +1,13 @@
-TRASHCAN
-========
+# TRASHCAN
+[AngularJS](http://angularjs.org) project bootstrapped with [Yeoman](http://www.yeoman.io).
+API build with [SlimFramework](http://www.slimframework.com/) and ORM [Redbean](http://www.redbeanphp.com/).
 
-AngularJS project bootstrapped with Yeoman.
-API build with SlimFramework and ORM Redbean.
-
-# deploy
+## Deploy
 * clone repo
-* install bower
+* install [bower](http://bower.io)
 * run `bower install`
 * run `grunt server`
-* host api on a localserver named http://slim:8888 (or change url)
+* host `api` on a localserver named `http://slim:8888` (or change url)
 
-# TODO
-* add .sql db
+## Todo
+* add MySQL db

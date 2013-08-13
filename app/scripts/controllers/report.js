@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('trashcanApp')
-  .controller('ReportCtrl', function ($scope, $http) {
+  .controller('ReportCtrl', function ($scope, $location, addTrash) {
 
     // Get location
     navigator.geolocation.getCurrentPosition(function(pos) {
@@ -17,21 +17,9 @@ angular.module('trashcanApp')
     });
 
     // Save new trash
-    /*$scope.trash = {};
     $scope.report = function () {
       addTrash.save($scope.trash, function() {
         $location.path('/');
       });
-    };*/
-
-    $scope.trash = {};
-    $scope.report = function () {
-      $http.post('http://slim:8888/api/report', $scope.trash)
-        .success(function(data, status) {
-          window.console.log('success:' + status);
-        }).
-        error(function(data, status) {
-          window.console.log('error:' + status);
-        });
     };
   });
