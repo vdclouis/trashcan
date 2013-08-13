@@ -1,6 +1,6 @@
 <div class="report">
   <h1>Report</h1>
-  <form name="report">
+  <form name="report" ng-submit="report()">
     <!-- image -->
     <!--  size -->
     <div class="control-group bg-grey">
@@ -39,7 +39,8 @@
     </div>
     <!-- submit -->
     <div class="control-group">
-      <a href="" ng-click="report()" type="submit" class="button">Report</a>
+      <!--<a href="" ng-click="report()" type="submit" class="button">Report</a>-->
+      <input type="submit" value="report"/>
     </div>
   </form>
 </div>
