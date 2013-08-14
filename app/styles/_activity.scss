@@ -1,0 +1,24 @@
+.activity {
+  ul {
+    margin: 0;
+
+    li {
+      padding: 20px;
+      list-style: none;
+      border-bottom: 1px solid #d3d3d3;
+      color: darkgrey;
+
+      &:last-child {
+        border-bottom: none;
+      }
+
+      span {
+        color: #363636
+      }
+
+      i {
+        float: right;
+      }
+    }
+  }
+}

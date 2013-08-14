@@ -1,12 +1,12 @@
 'use strict';
 
 angular.module('trashcanApp')
-  .controller('ReportCtrl', function ($scope, $location, addTrash) {
+  .controller('ReportCtrl', function ($scope, $location, Rest) {
 
     // Get location
     navigator.geolocation.getCurrentPosition(function(pos) {
-      $scope.lat = pos.coords.latitude;
-      $scope.lon = pos.coords.longitude;
+      $scope.trash = { lat: pos.coords.latitude, long: pos.coords.longitude };
+      $scope.$apply();
     });
 
     // Style file input
@@ -18,7 +18,7 @@ angular.module('trashcanApp')
 
     // Save new trash
     $scope.report = function () {
-      addTrash.save($scope.trash, function() {
+      Rest.addTrash().save($scope.trash, function() {
         $location.path('/');
       });
     };

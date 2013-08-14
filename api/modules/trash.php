@@ -1,6 +1,6 @@
 <?php
 
-// test routes
+// Test routes
 $app->get('/', function() {
   echo "I R THE AWESOME API!";
 });
@@ -8,24 +8,30 @@ $app->get('/hello/:name', function($name) {
   echo "Hello, $name!";
 });
 
-// get all trash
+// Get all trash
 $app->get('/activity', function() use ($app) {
   $trash = R::find('trash');
   $app->response()->header('Content-Type', 'application/json');
   echo json_encode(R::exportAll($trash));
 });
 
-// post
+// Get specific trash
+$app->get('/activity/:id', function ($id) {
+  $trash = R::findOne('trash', ' id = ? ',array($id));
+  echo json_encode(R::exportAll($trash));
+});
+
+// Add new trash
 $app->post('/report', function() use ($app) {
-  //get body, decode into PHP object
+  // Get body, decode into PHP object
   $request = $app->request();
   $body = $request->getBody();
   $input = json_decode($body);
 
-  //create and save element record
+  // Create and save element record
   $trash = R::dispense('trash');
-  $size = $request->params('size');
-  $trash->size = $size;
+  $howmuch = $request->params('howmuch');
+  $trash->howmuch = $howmuch;
   $type = $request->params('type');
   $trash->type = $type;
   $lat = $request->params('lat');

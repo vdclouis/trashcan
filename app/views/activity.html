@@ -1,4 +1,16 @@
-<ul>
-  <li ng-repeat="t in trash">{{ t.id }} - {{ t.lat }},{{ t.long }}</li>
-  <li ng-repeat="n in name">{{ n.formatted_address }}</li>
-</ul>
+<div class="activity">
+  <h1>activity</h1>
+  <ul>
+    <li ng-repeat="t in trash">
+      <i ng-show="t.howmuch == 'Small'" class="icon-trash icon-3x"></i>
+      <i ng-show="t.howmuch == 'Medium'" class="icon-shopping-cart icon-3x"></i>
+      <i ng-show="t.howmuch == 'Big'" class="icon-truck icon-3x"></i>
+      <a href="#/activity/{{ t.id }}">
+        <span>{{ t.details | uppercase }} - {{ t.type }}</span>
+        <br/>
+        {{ t.lat | geo }}, {{ t.long | geo }}
+        <br/>
+      </a>
+    </li>
+  </ul>
+</div>

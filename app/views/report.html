@@ -1,46 +1,37 @@
 <div class="report">
-  <h1>Report</h1>
-  <form name="report" ng-submit="report()">
-    <!-- image -->
-    <!--  size -->
-    <div class="control-group bg-grey">
-      <label>Size of trash:</label>
-      <label class="radio">
-        <input ng-model="trash.size" type="radio" name="optionsRadios" id="optionsRadios1" value="option1"><i class="icon-trash"></i> Small
-      </label>
-      <label class="radio">
-        <input ng-model="trash.size" type="radio" name="optionsRadios" id="optionsRadios2" value="option2"><i class="icon-shopping-cart"></i> Medium
-      </label>
-      <label class="radio">
-        <input ng-model="trash.size" type="radio" name="optionsRadios" id="optionsRadios3" value="option3"><i class="icon-truck"></i> Big
-      </label>
-    </div>
-    <!-- type -->
-    <div class="control-group">
-      <label>Type of trash:</label>
-      <select multiple="multiple" ng-model="trash.type">
-        <option> Rest </option>
-        <option> PMD </option>
-        <option> GFT </option>
-        <option> KGA </option>
-        <option> Glas </option>
-        <option> Karton </option>
-      </select>
-    </div>
-    <!-- location -->
-    <div class="control-group bg-grey">
-      <label>Location:</label>
-      <input ng-model="trash.lat" type="text" value="" />
-      <input ng-model="trash.long" type="text" value="" />
-    </div>
-    <div class="control-group">
-      <label>Details:</label>
-      <textarea ng-model="trash.details" rows="3"></textarea>
-    </div>
-    <!-- submit -->
-    <div class="control-group">
-      <!--<a href="" ng-click="report()" type="submit" class="button">Report</a>-->
-      <input type="submit" value="report"/>
-    </div>
+  <h1>report</h1>
+
+  <form>
+    <label>Size:</label>
+    <label class="radio">
+      <input type="radio" ng-model="trash.howmuch" value="Small"><i class="icon-trash"></i> Small
+    </label>
+    <label class="radio">
+      <input type="radio" ng-model="trash.howmuch" value="Medium"><i class="icon-shopping-cart"></i> Medium
+    </label>
+    <label class="radio">
+      <input type="radio" ng-model="trash.howmuch" value="Big"><i class="icon-truck"></i> Big
+    </label>
+
+    <label for="type">Type of trash:</label>
+    <select multiple="multiple" id="type" ng-model="trash.type">
+      <option>Rest</option>
+      <option>PMD</option>
+      <option>GFT</option>
+      <option>KGA</option>
+      <option>Glas</option>
+      <option>Karton</option>
+    </select>
+
+    <label for="lat">Latitude:</label>
+    <input type="number" step="any" id="lat" value="{{ lat }}" ng-model="trash.lat">
+
+    <label for="long">Longitude:</label>
+    <input type="number" step="any" id="long" value="{{ long }}" ng-model="trash.long">
+
+    <label for="details">Details:</label>
+    <textarea id="details" ng-model="trash.details"></textarea>
+
+    <a href="" ng-click="report()" class="button">Report</a>
   </form>
 </div>

@@ -1,11 +1,12 @@
 'use strict';
 
-angular.module('trashcanApp', ['ngResource'])
+angular.module('trashcanApp', ['ngResource', 'google-maps'])
   .config(function($httpProvider){
 
     // CORS
     delete $httpProvider.defaults.headers.common['X-Requested-With'];
 
+    // Serialize data
     $httpProvider.defaults.transformRequest = function (data) {
       var str = [];
       for (var p in data) {
@@ -13,6 +14,7 @@ angular.module('trashcanApp', ['ngResource'])
       }
       return str.join('&');
     };
+    // Set header for PUT and POST
     $httpProvider.defaults.headers.put['Content-Type'] = $httpProvider.defaults.headers.post['Content-Type'] =
       'application/x-www-form-urlencoded; charset=UTF-8';
    })
@@ -45,6 +47,10 @@ angular.module('trashcanApp', ['ngResource'])
       .when('/info', {
         templateUrl: 'views/info.html',
         controller: 'InfoCtrl'
+      })
+      .when('/activity/:id', {
+        templateUrl: 'views/activity/:id.html',
+        controller: 'ActivityIdCtrl'
       })
       .otherwise({
         redirectTo: '/'
