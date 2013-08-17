@@ -11,7 +11,6 @@ $app->get('/hello/:name', function($name) {
 // Get all trash
 $app->get('/activity', function() use ($app) {
   $trash = R::find('trash');
-  $app->response()->header('Content-Type', 'application/json');
   echo json_encode(R::exportAll($trash));
 });
 

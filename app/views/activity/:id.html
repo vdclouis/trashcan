@@ -1,8 +1,19 @@
 <div class="activityId">
-  <h1>Title: {{ trash.details }}</h1>
-  <img src="http://placebear.com/111/111" alt=""/>
+  <h1>{{ trash.details }}</h1>
+
+  <h3>Description:</h3>
   {{ trash.lat }},{{ trash.long }} <br>
   {{ trash.type }} <br>
   {{ trash.howmuch }} <br>
-  <google-maps></google-maps>
+  <h3>Photo:</h3>
+  <img src="http://placebear.com/320/150" alt=""/>
+  <h3>Map:</h3>
+  <google-map
+    center="center"
+    draggable="true"
+    zoom="zoom"
+    markers="markers"
+    style="height: 200px"
+    mark-click="true">
+  </google-map>
 </div>

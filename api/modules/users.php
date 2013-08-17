@@ -13,10 +13,17 @@ $app->get('/users/:id', function ($id) {
 });
 
 // Register new user
-$app->post('/users', function() use ($app) {
+$app->post('/register', function() use ($app) {
   $request = $app->request();
   $name = $request->params('name');
+  $password = $request->params('password');
+  $registered = $request->params('registered');
+
+  //create a 'user' object, to be stored in a table named users
   $user = R::dispense('users');
   $user->name = $name;
-  $id = R::store($user);
+  $user->password = $password;
+  $user->registered = $registered;
+
+  R::store($user);
 });

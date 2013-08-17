@@ -52,6 +52,14 @@ angular.module('trashcanApp', ['ngResource', 'google-maps'])
         templateUrl: 'views/activity/:id.html',
         controller: 'ActivityIdCtrl'
       })
+      .when('/register', {
+        templateUrl: 'views/register.html',
+        controller: 'RegisterCtrl'
+      })
+      .when('/login', {
+        templateUrl: 'views/login.html',
+        controller: 'LoginCtrl'
+      })
       .otherwise({
         redirectTo: '/'
       });

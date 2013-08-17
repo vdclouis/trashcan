@@ -35,9 +35,11 @@ footer {
             display: block;
             text-align: center; }
 
-.report .button, .report .button-yellow {
-  margin: 0;
-  width: 14.2em; }
+.report {
+  padding-left: 20px; }
+  .report .button, .report .button-yellow {
+    margin: 0;
+    width: 14.2em; }
 
 .info table {
   width: 100%;
@@ -81,12 +83,10 @@ footer {
     .activity ul li i {
       float: right; }
 
-.activityId img {
-  float: right;
-  display: block; }
-
 .container-fluid {
-  margin-bottom: 55px; }
+  margin-bottom: 55px;
+  padding-left: 0;
+  padding-right: 0; }
 
 .icon-info-sign {
   color: rgba(0, 0, 0, 0.1);
@@ -112,7 +112,7 @@ h1 {
   display: block;
   margin: 0 auto;
   padding: 10px;
-  width: 50%;
+  width: 100%;
   border-radius: 3px;
   background: #d2514b;
   box-shadow: 0 3px 0 #bb352f;

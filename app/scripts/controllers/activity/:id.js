@@ -5,4 +5,19 @@ angular.module('trashcanApp')
     Rest.getAll().query({id: $routeParams.id}, function(trash) {
       $scope.trash = trash[0];
     });
+
+    // google maps new UI
+    google.maps.visualRefresh = true;
+
+    // Center of map
+    $scope.center = {
+      latitude: 51,
+      longitude: 4
+    };
+
+    // zoom factor
+    $scope.zoom = 8;
+
+    // markers array
+    $scope.markers = [];
   });
