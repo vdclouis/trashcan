@@ -1,19 +1,25 @@
 <div class="activityId">
-  <h1>{{ trash.details }}</h1>
+  <header>
+    <h1>Detail</h1>
+  </header>
 
-  <h3>Description:</h3>
-  {{ trash.lat }},{{ trash.long }} <br>
-  {{ trash.type }} <br>
-  {{ trash.howmuch }} <br>
-  <h3>Photo:</h3>
+
+  <h2>Description:</h2>
+  <div class="list">
+    <ul>
+      <li><i class="icon-location-arrow"></i> Coords <span>{{ trash.lat | number:3 }}, {{ trash.long | number:3 }}</span></li>
+      <li><i class="icon-tag"></i> Type <span>{{ trash.type }}</span></li>
+      <li><i class="icon-resize-horizontal"></i> Size <span>{{ trash.howmuch }}</span></li>
+    </ul>
+  </div>
+  <h2>Photo:</h2>
   <img src="http://placebear.com/320/150" alt=""/>
-  <h3>Map:</h3>
+  <h2>Map:</h2>
   <google-map
     center="center"
     draggable="true"
     zoom="zoom"
     markers="markers"
-    style="height: 200px"
     mark-click="true">
   </google-map>
 </div>

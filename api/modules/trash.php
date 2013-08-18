@@ -39,5 +39,11 @@ $app->post('/report', function() use ($app) {
   $trash->long = $long;
   $details = $request->params('details');
   $trash->details = $details;
+
+  // image
+  $picture = $request->params('picture');
+  //$pictureString = file_get_contents('$picture');
+  $trash->picture = $picture;
+
   R::store($trash);
 });

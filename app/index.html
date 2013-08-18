@@ -21,7 +21,7 @@
     <script src="bower_components/modernizr/modernizr.js"></script>
   </head>
   
-  <body ng-app="trashcanApp">
+  <body ng-app="trashcanApp" ng-controller="InitCtrl">
     <!--[if lt IE 7]>
       <p class="chromeframe">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better experience this site.</p>
     <![endif]-->
@@ -40,11 +40,11 @@
     <footer>
 	    <nav>
 	    	<ul>
-	        <li><a href="#/activity"><span><i class="icon-coffee icon-2x"></i></span><span> Activity</span></a></li>
-	        <li><a href="#/nearme">  <span><i class="icon-compass icon-2x"></i></span><span> Near Me</a></li>
-	        <li><a href="#/report">  <span><i class="icon-map-marker icon-2x"></i></span><span> Report</a></li>
-	        <li><a href="#/trashmap"><span><i class="icon-globe icon-2x"></i></span><span> Trashmap</a></li>
-	        <li><a href="#/profile"> <span><i class="icon-user icon-2x"></i></span><span> Profile</a></li>
+	        <li><a href="#/activity" ng-class="{active:isActive('/activity')}"> <span><i class="icon-coffee icon-2x"></i></span><span> Activity</span></a></li>
+	        <li><a href="#/nearme" ng-class="{active:isActive('/nearme')}"> <span><i class="icon-compass icon-2x"></i></span><span> Near Me</a></li>
+	        <li><a href="#/report" ng-class="{active:isActive('/report')}"> <span><i class="icon-map-marker icon-2x"></i></span><span> Report</a></li>
+	        <li><a href="#/trashmap" ng-class="{active:isActive('/trashmap')}"> <span><i class="icon-globe icon-2x"></i></span><span> Trashmap</a></li>
+	        <li><a href="#/profile" ng-class="{active:isActive('/profile')}"> <span><i class="icon-user icon-2x"></i></span><span> Profile</a></li>
 	       </ul>
 	    </nav>
     </footer>
@@ -73,8 +73,9 @@
     <script src="bower_components/bootstrap-sass/js/bootstrap-scrollspy.js"></script>
     <script src="bower_components/bootstrap-sass/js/bootstrap-collapse.js"></script>
     <script src="bower_components/bootstrap-sass/js/bootstrap-tab.js"></script>
-    <script src="bower_components/bootstrap-filestyle/src/bootstrap-filestyle.min.js"></script>
     <script src="bower_components/momentjs/moment.js"></script>
+    <script src="bower_components/angular-route/angular-route.js"></script>
+    <script type="text/javascript" src="bower_components/angular-animate/angular-animate.js"></script>
     <!-- endbuild -->
 
     <!-- build:js scripts/modules.js -->
@@ -91,6 +92,7 @@
     <script src="scripts/controllers/activity/:id.js"></script>
     <script src="scripts/controllers/register.js"></script>
     <script src="scripts/controllers/login.js"></script>
+    <script src="scripts/controllers/init.js"></script>
     <!-- endbuild -->
   </body>
 </html>

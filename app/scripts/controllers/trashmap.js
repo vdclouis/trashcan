@@ -2,13 +2,13 @@
 
 angular.module('trashcanApp')
   .controller('TrashmapCtrl', function ($scope, Rest) {
-    // get all trash
+    // Get all trash
     $scope.trash = Rest.getAll().query({}, function(data) {
       for (var i=0; i<data.length; i++) {
         var lat = data[i].lat;
         var long = data[i].long;
 
-        // push coords to makers array
+        // Push coords to makers array
         $scope.markers.push({
           latitude: lat,
           longitude: long
@@ -16,7 +16,7 @@ angular.module('trashcanApp')
       }
     });
 
-    // google maps new UI
+    // Google maps new UI
     google.maps.visualRefresh = true;
 
     // Center of map
@@ -25,9 +25,9 @@ angular.module('trashcanApp')
       longitude: 4
     };
 
-    // zoom factor
+    // Zoom factor
     $scope.zoom = 8;
 
-    // markers array
+    // Markers array
     $scope.markers = [];
   });

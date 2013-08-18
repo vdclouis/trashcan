@@ -9,14 +9,10 @@ angular.module('trashcanApp')
       $scope.$apply();
     });
 
-    // Style file input
-    $(':file').filestyle({
-      input: false,
-      icon: true,
-      buttonText: 'Take picture'
-    });
+    //Style file input
+    //$(':file').filestyle();
 
-    // Save new trash
+    //Save new trash
     $scope.report = function () {
       Rest.addTrash().save($scope.trash, function() {
         $location.path('/');

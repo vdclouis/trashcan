@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('trashcanApp', ['ngResource', 'google-maps'])
+angular.module('trashcanApp', ['ngResource', 'ngRoute', 'ngAnimate', 'google-maps'])
   .config(function($httpProvider){
 
     // CORS

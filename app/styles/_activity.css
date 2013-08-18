@@ -1,0 +1,13 @@
+.activity ul {
+  margin: 0; }
+  .activity ul li {
+    padding: 20px;
+    list-style: none;
+    border-bottom: 1px solid #d3d3d3;
+    color: darkgrey; }
+    .activity ul li:last-child {
+      border-bottom: none; }
+    .activity ul li span {
+      color: #363636; }
+    .activity ul li i {
+      float: right; }

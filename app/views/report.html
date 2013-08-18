@@ -1,7 +1,12 @@
 <div class="report">
-  <h1>report</h1>
+  <header>
+    <h1>Report</h1>
+  </header>
 
   <form>
+    <h2>Picture:</h2>
+    <input type="file" ng-model="trash.picture"/>
+
     <h2>Size:</h2>
     <label class="radio">
       <input type="radio" ng-model="trash.howmuch" value="Small"><i class="icon-trash"></i> Small
@@ -30,7 +35,7 @@
     <input class="input-xlarge" type="number" step="any" id="long" value="{{ long }}" ng-model="trash.long">
 
     <h2>Details:</h2>
-    <textarea class="input-xlarge" id="details" ng-model="trash.details"></textarea>
+    <textarea rows="4" class="input-xlarge" id="details" ng-model="trash.details"></textarea>
 
     <a href="#" ng-click="report()" class="button">Report</a>
   </form>

@@ -1,0 +1,22 @@
+header {
+  /* fallback/image non-cover color */
+  background-color: #f2f2f2;
+
+  /* Safari 4+, Chrome 1-9 */
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#f2f2f2), to(#eee));
+
+  /* Safari 5.1+, Mobile Safari, Chrome 10+ */
+  background-image: -webkit-linear-gradient(top, #f2f2f2, #eee);
+
+  /* Firefox 3.6+ */
+  background-image: -moz-linear-gradient(top, #f2f2f2, #eee);
+
+  /* IE 10+ */
+  background-image: -ms-linear-gradient(top, #f2f2f2, #eee);
+
+  /* Opera 11.10+ */
+  background-image: -o-linear-gradient(top, #f2f2f2, #eee);
+
+  margin: -0px -20px 0 -20px;
+  border-bottom: 2px solid #ccc;
+}

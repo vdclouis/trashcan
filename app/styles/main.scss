@@ -6,45 +6,61 @@
 @import "profile";
 @import "activity";
 @import "activityId";
+@import "header";
+@import "colors";
 
+html {
+  background: $background;
+}
+// Set Font
+body {
+  font-family: 'Open Sans';
+}
+// Basic styling
 .container-fluid {
   margin-bottom: 55px;
-  padding-left: 0;
-  padding-right: 0;
+  background: $background;
 }
 
+// Info icon
 .icon-info-sign {
   color: rgba(0,0,0,.1);
   position: absolute;
   right: 20px;
-  top: 13px;
+  top: 10px;
 }
 
-.bg-grey {
-  background: rgba(0,0,0,.1);
-  margin: 10px -20px;
-  padding: 10px 20px;
-}
-
+// Text decoration
 a, a:active, a:hover {
   text-decoration: none;
 }
 
+// Header Styling
 h1 {
-  font-family: OilCan;
+  font-family: 'Open Sans';
+  font-weight: 300;
   color: #d2514b;
+  margin: 0;
   text-shadow: 0px 1px rgba(0, 0, 0, 0.2);
   text-align: center;
+  font-size: 2em;
+}
+h2 {
+  font-family: 'Open Sans';
+  font-weight: 200;
+  font-size: 1.5em;
+  color: #666;
 }
 
+// Button Style
 .button {
   display: block;
   margin: 0 auto;
   padding: 10px;
-  width: 100%;
+  width: 80%;
   border-radius: 3px;
-  background: #d2514b;
-  box-shadow: 0 3px 0 #bb352f;
+  background: $red;
+  box-shadow: 0 3px 0 $dark-red;
   color: #f2f2f2;
   text-align: center;
   text-decoration: none;
@@ -74,10 +90,11 @@ h1 {
 }
 .button-yellow {
   @extend .button;
-  background: #E8C04F;
-  box-shadow: 0 3px 0 darken(#E8C04F, 15%);
+  background: $yellow;
+  box-shadow: 0 3px 0 $dark-yellow;
 }
 
+// Style for '/' route
 .main {
   text-align: center;
 
@@ -87,3 +104,33 @@ h1 {
   }
 }
 
+// List style
+.list {
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  background: #fff;
+
+  ul {
+    margin: 0;
+  }
+
+  li {
+    list-style: none;
+    border-bottom: 1px solid #ccc;
+    padding: 7px 5px;
+
+    &:last-child {
+      border: none;
+    }
+  }
+
+  span {
+    float: right;
+    vertical-align: top;
+    margin-top: -2px;
+    padding: 2px 7px;
+    color: white;
+    border-radius: 15px;
+    background: #E8C04F;
+  }
+}
