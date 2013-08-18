@@ -8,6 +8,7 @@
 @import "activityId";
 @import "header";
 @import "colors";
+@import "register";
 
 html {
   background: $background;
@@ -109,6 +110,10 @@ h2 {
   border-radius: 4px;
   border: 1px solid #ccc;
   background: #fff;
+
+  i {
+    color: $red;
+  }
 
   ul {
     margin: 0;

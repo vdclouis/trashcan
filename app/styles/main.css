@@ -1,7 +1,6 @@
 .trashmap google-map {
   display: block;
-  height: 100%;
-  overflow: hidden;
+  height: 400px;
   margin: 0 -20px 0 -20px; }
 
 @font-face {
@@ -91,7 +90,12 @@ footer {
 .activityId google-map {
   height: 300px;
   display: block;
-  margin: 0 -20px 0 -20px; }
+  margin: 0 -20px; }
+.activityId img {
+  width: calc(100% - 10px );
+  width: -webkit-calc(100% - 10px );
+  width: -moz-calc(100% - 10px );
+  display: block; }
 
 header {
   /* fallback/image non-cover color */
@@ -188,6 +192,8 @@ h2 {
   border-radius: 4px;
   border: 1px solid #ccc;
   background: #fff; }
+  .list i {
+    color: #d2514b; }
   .list ul {
     margin: 0; }
   .list li {

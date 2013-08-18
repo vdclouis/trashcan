@@ -1,3 +1,9 @@
+.activityId google-map {
+  height: 300px;
+  display: block;
+  margin: 0 -20px; }
 .activityId img {
-  float: right;
+  width: calc(100% - 10px );
+  width: -webkit-calc(100% - 10px );
+  width: -moz-calc(100% - 10px );
   display: block; }

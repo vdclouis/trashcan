@@ -12,8 +12,13 @@
       <li><i class="icon-resize-horizontal"></i> Size <span>{{ trash.howmuch }}</span></li>
     </ul>
   </div>
-  <h2>Photo:</h2>
-  <img src="http://placebear.com/320/150" alt=""/>
+
+  <!--truth = show-->
+  <div ng-show="trash.picture.length">
+    <h2>Photo:</h2>
+    <img ng-src="{{ trash.picture }}" class="img-polaroid" alt=""/>
+  </div>
+
   <h2>Map:</h2>
   <google-map
     center="center"

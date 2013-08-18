@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('trashcanApp')
-  .controller('ReportCtrl', function ($scope, $location, Rest) {
+  .controller('ReportCtrl', function ($scope, $location, Rest, $http) {
 
     // Get location
     navigator.geolocation.getCurrentPosition(function(pos) {
@@ -9,13 +9,30 @@ angular.module('trashcanApp')
       $scope.$apply();
     });
 
-    //Style file input
-    //$(':file').filestyle();
-
-    //Save new trash
+    // Save new trash
     $scope.report = function () {
       Rest.addTrash().save($scope.trash, function() {
         $location.path('/');
       });
     };
+
+
+    // Set API key
+    filepicker.setKey('APaFUoqMXQQWpfo22DQyHz');
+
+    // Upload img and save url
+    $scope.ink = function() {
+      filepicker.pick({
+        container: 'modal',
+        services:['COMPUTER']
+      },
+      function(InkBlob){
+        //console.log(InkBlob.url);
+        $scope.trash.picture = InkBlob.url;
+        $scope.$apply();
+      },
+      function(FPError){
+        console.log(FPError.toString());
+      });
+    }
   });

@@ -17,13 +17,13 @@ $app->post('/register', function() use ($app) {
   $request = $app->request();
   $name = $request->params('name');
   $password = $request->params('password');
-  $registered = $request->params('registered');
+  //$registered = $request->params('registered');
 
   //create a 'user' object, to be stored in a table named users
   $user = R::dispense('users');
   $user->name = $name;
   $user->password = $password;
-  $user->registered = $registered;
+  //$user->registered = $registered;
 
   R::store($user);
 });
