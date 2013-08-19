@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('trashcanApp')
-  .controller('ReportCtrl', function ($scope, $location, Rest, $http) {
+  .controller('ReportCtrl', function ($scope, $location, Rest) {
 
     // Get location
     navigator.geolocation.getCurrentPosition(function(pos) {
@@ -15,7 +15,6 @@ angular.module('trashcanApp')
         $location.path('/');
       });
     };
-
 
     // Set API key
     filepicker.setKey('APaFUoqMXQQWpfo22DQyHz');

@@ -3,31 +3,20 @@
     <h1>Register</h1>
   </header>
 
-  <form name="register">
+  <form>
+    <h2>Name:</h2>
+    <input type="text" placeholder="Crocodile Dundee" ng-model="user.name"/>
 
-    <h2>Username:</h2>
-    <input type="text"     ng-model="user.name"/>
-    <input type="password" ng-model="user.password"/>
-    <!--
     <h2>Password:</h2>
-
     <input ng-model='user.password' type="password" name='password' placeholder='password' required>
-    <div class="alert help-inline" ng-show="register.password.$error.required">
-      Field required
-    </div>
-
-
+    <div ng-show="form.password.$error.required">
+      Field required</div>
     <input ng-model='user.password_verify' type="password" name='confirm_password' placeholder='confirm password' required data-password-verify="user.password">
-    <div class="alert help-inline" ng-show="register.confirm_password.$error.required">
-      Field required
-    </div> -->
+    <div ng-show="form.confirm_password.$error.required">
+      Field required!</div>
+    <div ng-show="form.confirm_password.$error.passwordVerify">
+      Fields are not equal!</div>
 
-    <!-- Submit button -->
     <a href="" class="button" ng-click="register()">Register</a>
-
-    <!-- Alert box -->
-    <span class="alert alert-danger" ng-show="register.confirm_password.$error.passwordVerify">
-      Fields are not equal!
-    </span>
   </form>
 </div>

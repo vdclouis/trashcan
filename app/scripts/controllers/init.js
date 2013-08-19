@@ -8,4 +8,7 @@ angular.module('trashcanApp')
       return route === $location.path();
     }
 
+    // Permissions
+
+
   });

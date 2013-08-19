@@ -1,6 +1,7 @@
 {
   "require": {
     "slim/slim": "2.*",
-    "ircmaxell/password-compat": "dev-master"
+    "ircmaxell/password-compat": "dev-master",
+    "slim/extras": "~2"
   }
 }

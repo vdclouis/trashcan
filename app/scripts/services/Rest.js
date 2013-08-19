@@ -13,7 +13,7 @@ angular.module('trashcanApp')
         var Rest = $resource('http://slim:8888/api/report',{},{});
         return Rest;
       },
-      addUser: function() {
+      addNewUser: function() {
         var Rest = $resource('http://slim:8888/api/register',{},{});
         return Rest;
       }
