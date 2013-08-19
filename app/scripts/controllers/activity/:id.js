@@ -32,7 +32,7 @@ angular.module('trashcanApp')
     };
 
     // Zoom factor
-    $scope.zoom = 10;
+    $scope.zoom = 15;
 
     // Markers array
     $scope.markers = [];

@@ -121,6 +121,11 @@ header {
 .register .button, .register .button-yellow {
   margin: 0; }
 
+.nearme google-map {
+  display: block;
+  height: 400px;
+  margin: 0 -20px; }
+
 html {
   background: #f9f9f9; }
 
