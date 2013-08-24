@@ -1,32 +1,30 @@
 .profile {
-  img, .profile-info {
-    display: inline-block;
-    vertical-align: top;
+
+  header {
+    margin-bottom: 20px;
   }
 
-  .profile-info {
-    margin: -10px 0 0 20px;
+  img, .right {
+    display: inline-block;
+    vertical-align: middle;
   }
 
   h2 {
-    margin: 0;
-    font-size: 1.6em
+    color: #333;
+    font-size: 2em;
+    margin: 20px 0 0 0;
   }
 
   h3 {
-    font-size: 1.2em;
+    color: #666;
+    font-size: 1.5em;
+    font-weight: 200;
     margin: 0;
-    font-style: italic;
-    line-height: normal;
+    padding: 0;
   }
 
-  .profile-extra {
-    margin: 20px -20px 0 -20px;
-    padding: 20px;
-    background: #f2f2f2;
+  ul {
+    margin: 20px 0;
   }
 
-  .button {
-    margin-top: 20px;
-  }
 }

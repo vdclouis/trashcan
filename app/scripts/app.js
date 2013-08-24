@@ -60,6 +60,10 @@ angular.module('trashcanApp', ['ngResource', 'ngRoute', 'ngAnimate', 'google-map
         templateUrl: 'views/login.html',
         controller: 'LoginCtrl'
       })
+      .when('/edit/:id', {
+        templateUrl: 'views/edit.html',
+        controller: 'EditCtrl'
+      })
       .otherwise({
         redirectTo: '/'
       });

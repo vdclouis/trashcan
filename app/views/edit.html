@@ -1,0 +1,36 @@
+<div class="edit">
+  <header>
+    <h1>Report</h1>
+  </header>
+  <h1>{{ trash }}</h1>
+  <form>
+    <h2>Picture:</h2>
+    <input type="text" ng-model="trash.picture"/>
+
+    <h2>Size:</h2>
+    <label class="radio">
+      <input type="radio" ng-model="trash.howmuch" value="Small"><i class="icon-trash"></i> Small
+    </label>
+    <label class="radio">
+      <input type="radio" ng-model="trash.howmuch" value="Medium"><i class="icon-shopping-cart"></i> Medium
+    </label>
+    <label class="radio">
+      <input type="radio" ng-model="trash.howmuch" value="Big"><i class="icon-truck"></i> Big
+    </label>
+
+    <h2>Type of trash:</h2>
+    <select class="input-xlarge" multiple id="type" ng-model="trash.type" ng-options="type as type.name for type in types">
+    </select>
+
+    <h2>Latitude:</h2>
+    <input class="input-xlarge" type="text" id="lat" value="{{ lat }}" ng-model="trash.lat">
+
+    <h2>Longitude:</h2>
+    <input class="input-xlarge" type="text" id="long" value="{{ long }}" ng-model="trash.long">
+
+    <h2>Details:</h2>
+    <textarea rows="4" class="input-xlarge" id="details" ng-model="trash.details"></textarea>
+
+    <a href="#" ng-click="edit( trash.id )" class="button">Update</a>
+  </form>
+</div>

@@ -3,11 +3,22 @@
     <h1>Activity</h1>
   </header>
 
+  <!-- Search -->
+  <input placeholder="Search..." class="input-xlarge" type="search" results ng-model="query"/>
+
   <ul>
-    <li ng-repeat="t in trash">
+
+    <!-- Loop through activity -->
+    <li ng-repeat="t in trash | filter:query">
+      <!-- show icon based on Size -->
       <i ng-show="t.howmuch == 'Small'" class="icon-trash icon-3x"></i>
       <i ng-show="t.howmuch == 'Medium'" class="icon-shopping-cart icon-3x"></i>
       <i ng-show="t.howmuch == 'Big'" class="icon-truck icon-3x"></i>
+
+      <a href="#/edit/{{ t.id }}">Edit</a>
+      <a href="" ng-click="delete( t.id )">Delete</a>
+
+      <!-- Link to specific view -->
       <a href="#/activity/{{ t.id }}">
         <span>{{ t.details | uppercase }} - {{ t.type }}</span>
         <br/>

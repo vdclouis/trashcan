@@ -3,7 +3,7 @@
 angular.module('trashcanApp')
   .controller('ActivityIdCtrl', function ($scope, Rest, $routeParams) {
     // Get detail of trash based on url
-    Rest.getAll().query({id: $routeParams.id}, function(trash) {
+    Rest.get().query({id: $routeParams.id}, function(trash) {
       $scope.trash = trash[0];
 
       $scope.la = $scope.trash.lat;

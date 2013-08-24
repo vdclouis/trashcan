@@ -58,25 +58,23 @@ footer {
     padding-left: 3px;
     font-family: Georgia; }
 
-.profile img, .profile .profile-info {
+.profile header {
+  margin-bottom: 20px; }
+.profile img, .profile .right {
   display: inline-block;
-  vertical-align: top; }
-.profile .profile-info {
-  margin: -10px 0 0 20px; }
+  vertical-align: middle; }
 .profile h2 {
-  margin: 0;
-  font-size: 1.6em; }
+  color: #333;
+  font-size: 2em;
+  margin: 20px 0 0 0; }
 .profile h3 {
-  font-size: 1.2em;
+  color: #666;
+  font-size: 1.5em;
+  font-weight: 200;
   margin: 0;
-  font-style: italic;
-  line-height: normal; }
-.profile .profile-extra {
-  margin: 20px -20px 0 -20px;
-  padding: 20px;
-  background: #f2f2f2; }
-.profile .button, .profile .button-yellow {
-  margin-top: 20px; }
+  padding: 0; }
+.profile ul {
+  margin: 20px 0; }
 
 .activity ul {
   margin: 0; }
@@ -91,6 +89,9 @@ footer {
       color: #363636; }
     .activity ul li i {
       float: right; }
+.activity input {
+  width: 100%;
+  margin-top: 20px; }
 
 .activityId google-map {
   height: 300px;
