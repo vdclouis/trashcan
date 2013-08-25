@@ -10,7 +10,7 @@ angular.module('trashcanApp')
 
     $scope.delete = function(id) {
       Rest.get().remove({id: id}, {}, function() {
-        $location.path('/')
+        $location.path('/');
       });
       console.log(id);
     };

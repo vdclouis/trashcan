@@ -34,7 +34,7 @@ angular.module('trashcanApp')
           var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a));
           var d = R * c;
           distances[i] = d;
-          if ( closest == -1 || d < distances[closest] ) {
+          if ( closest === -1 || d < distances[closest] ) {
             closest = i;
           }
         }
@@ -46,7 +46,7 @@ angular.module('trashcanApp')
           longitude: data[closest].long
         });
         $scope.close = data[closest];
-        console.log(data[closest]);
+        //console.log(data[closest]);
       });
       $scope.$apply();
     });
@@ -69,7 +69,7 @@ angular.module('trashcanApp')
     // Center map on resize
     google.maps.event.addDomListener(window, 'resize', function() {
       $scope.center;
-      console.log('yay');
+      //console.log('yay');
     });
 
     // 100% height

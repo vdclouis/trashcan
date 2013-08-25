@@ -33,5 +33,5 @@ angular.module('trashcanApp')
       function(FPError){
         console.log(FPError.toString());
       });
-    }
+    };
   });

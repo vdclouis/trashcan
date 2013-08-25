@@ -6,9 +6,5 @@ angular.module('trashcanApp')
     // Active link checker
     $scope.isActive = function(route) {
       return route === $location.path();
-    }
-
-    // Permissions
-
-
+    };
   });
