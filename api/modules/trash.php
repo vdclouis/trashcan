@@ -16,7 +16,7 @@ $app->get('/activities', function() use ($app) {
 
 // Get specific trash
 $app->get('/activity/:id', function ($id) {
-  $trash = R::findOne('trash', ' id = ? ', array($id));
+  $trash = R::findOne('trash', 'id = ?', array($id));
   echo json_encode(R::exportAll($trash));
 });
 
@@ -24,7 +24,7 @@ $app->get('/activity/:id', function ($id) {
 $app->put('/edit/:id', function($id) use ($app) {
   $request = $app->request();
 
-  $trash = R::findOne('trash', ' id = ? ', array($id));
+  $trash = R::findOne('trash', 'id = ?', array($id));
 
   $howmuch = $request->params('howmuch');
   $trash->howmuch = $howmuch;
@@ -39,7 +39,7 @@ $app->put('/edit/:id', function($id) use ($app) {
   $picture = $request->params('picture');
   $trash->picture = $picture;
 
-  $id = R::store($trash);
+  R::store($trash);
 });
 
 // Add new trash
@@ -68,7 +68,7 @@ $app->post('/report', function() use ($app) {
 $app->delete('/activity/:id', function($id) use($app) {
   //$request = $app->request();
 
-  $trash = R::findOne('trash', ' id = ? ', array($id));
+  $trash = R::findOne('trash', 'id = ?', array($id));
 
   R::trash($trash);
 });

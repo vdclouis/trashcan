@@ -16,7 +16,7 @@ angular.module('trashcanApp')
 
       var lat = $scope.loc.lat;
       var long = $scope.loc.long;
-      var R = 6371; // radius of earth in km
+      var R = 6367; // radius of earth in km
       var distances = [];
       var closest = -1;
 
